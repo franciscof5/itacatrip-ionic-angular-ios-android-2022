@@ -1,0 +1,54 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color='primary' (click)="startApp()" [hidden]="!showSkip">Pular</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <swiper [slidesPerView]="1" (swiper)="setSwiperInstance($event)" (slideChangeTransitionStart)="onSlideChangeStart()">
+    <ng-template swiperSlide>
+      <div class="slide-container">
+      <img src="assets/img/ica-slidebox-img-1.png" class="slide-image" />
+      <h2 class="slide-title">
+        Bem vindo ao
+        <b>Itacatrip</b>
+      </h2>
+      <p>
+        Chegou em Itacaré? 
+        <b>entre no Itacatrip</b> para ficar por dentro das melhores oportunidades de passeios e promoções!
+      </p>
+    </div>
+    </ng-template>
+
+    <ng-template swiperSlide>
+      <div class="slide-container">
+      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image" />
+      <h2 class="slide-title">Tudo na sua mão!</h2>
+      <p>
+        <b>Itacatrip oferece</b> melhores passeios, locações de carros, quadriciculos, bike elétricas, barcos e lanchas!</p>
+        </div>
+    </ng-template>
+
+    <ng-template swiperSlide>
+      <div class="slide-container">
+      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image" />
+      <h2 class="slide-title">Pousadas e Restaurantes</h2>
+      <p>
+        <b>Melhores locais</b> estão aqui, não deixe de conferir nossas indicações de ouro.</p>
+        </div>
+    </ng-template>
+
+    <ng-template swiperSlide>
+      <div class="slide-container">
+      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image" />
+      <h2 class="slide-title">Pronto para explorar?</h2>
+      <ion-button fill="clear" (click)="startApp()">
+        Contrate nossos profissionais para passeios guiados, aulas de surf, yoga e capoeira e aproveite o melhor de Itacaré!
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-button>
+      </div>
+    </ng-template>
+  </swiper>
+</ion-content>
